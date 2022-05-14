@@ -12,11 +12,9 @@ const Nfts = () => {
 
     useEffect(() => {
         setNfts(data);
-        console.log(nfts)
        
         const filteredData = data?.filter(item => item.collection_name.toLowerCase().includes(searchTerm));
         
-        console.log(filteredData)
         setNfts(filteredData);
     }, [data, searchTerm]);
     
