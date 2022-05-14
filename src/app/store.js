@@ -7,8 +7,9 @@ import { nftsApi } from "../services/nftsApi";
 export default configureStore({
     reducer: {
         [cryptoApi.reducerPath]: cryptoApi.reducer,
-        [cryptoNewsApi.reducerPath]: cryptoNewsApi.reducer,
         [nftsApi.reducerPath]: nftsApi.reducer,
+        [cryptoNewsApi.reducerPath]: cryptoNewsApi.reducer,
+        
 
     },
 });

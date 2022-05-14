@@ -12,7 +12,7 @@ export const nftsApi = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: 'https://top-nft-collections-and-sales.p.rapidapi.com'}),
     endpoints: (builder) => ({
         getNfts: builder.query({
-            query: () => createRequest(`/collections/30d`),
+            query: () => createRequest('/collections/30d'),
         }),
     }),
 });
