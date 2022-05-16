@@ -11,7 +11,7 @@ const createRequest = (url) => ({ url, headers: cryptoApiHeaders });
 
 export const cryptoApi = createApi({
   reducerPath: 'cryptoApi',
-  baseQuery: fetchBaseQuery({ baseUrl: "https://cors-anywhere.herokuapp.com/" + process.env.REACT_APP_CRYPTO_API_URL }),
+  baseQuery: fetchBaseQuery({ baseUrl:  'https://api.coinranking.com/v2' }),
   endpoints: (builder) => ({
     getCryptos: builder.query({
       query: (count) => createRequest(`/coins?limit=${count}`),
@@ -21,7 +21,6 @@ export const cryptoApi = createApi({
       query: (coinId) => createRequest(`/coin/${coinId}`),
     }),
 
-    // Note: Change the coin price history endpoint from this - `coin/${coinId}/history/${timeperiod} to this - `coin/${coinId}/history?timeperiod=${timeperiod}`
     getCryptoHistory: builder.query({
       query: ({ coinId, timeperiod }) => createRequest(`coin/${coinId}/history?timePeriod=${timeperiod}`),
     }),

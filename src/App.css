@@ -25,7 +25,7 @@ a:hover{
 
 .navbar{
     flex: 0.2;
-    background-color: rgb(0, 21, 41);
+    background-image: linear-gradient(to right, #08cce3, #ffffff 70%) !important;
 }
 
 .main{
@@ -42,11 +42,11 @@ a:hover{
     margin: 10px;
     height: 100vh;
     margin: 0px;
-    background-color: rgb(0, 21, 41);
+    background-image: linear-gradient(to bottom, #08cce3 40%, #ffffff);
 }
 
 .logo-container{
-    background-color: #001529;
+    background-image: linear-gradient(to bottom, #08cce3, #ffffff);
     display: flex;
     padding: 20px;
     align-items: center;
@@ -56,7 +56,8 @@ a:hover{
     margin:0 0 0 15px;
 }
 .logo a{
-   color: white;
+    text-shadow:  0px 0px 5px #27555a, 0px 0px 10px #1f7684, 0px 0px 10px #93cbd3, 0px 0px 20px #eff5f5;
+    color: white !important;
 }
 .menu-control-container{
     display: none !important;
@@ -371,9 +372,138 @@ width: 70%;
 }
 
 .footer {
-    background-color: #001529;
+    background-image: radial-gradient(circle, #08cce3, #ffffff) !important;
     display: flex;
     flex-direction: column;
     padding: 20px;
     align-items: center;
 }
+
+.ant-menu {
+    background-image: linear-gradient(to top, #08cce3 30%, #ffffff) !important;
+}
+
+.ant-menu-vertical{
+    border-right: none !important;
+}
+
+.ant-space-item > a {
+    color: #0b1f22
+}
+
+.ant-layout-footer{
+    padding: 0px !important;
+}
+
+ .searchBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%,50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color : #2f3640;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+
+@import url(https://fonts.googleapis.com/css2?family=Koulen&family=Roboto+Condensed:wght@400;700);
+
+  
+.maniax-container {
+    display: flex;
+  /*   border:1px solid red; */
+    height: 100%;
+    align-items: center;
+  }
+  
+  .maniax-svg {
+      display: block;
+      font: 5em/1 'Roboto Condensed';
+      font-weight: bold;
+      width: 210px;
+      margin: 0 auto;
+      padding-left: 10px;
+  }
+  
+  .text-copy {
+      fill: none;
+      stroke: white;
+      stroke-dasharray: 6% 29%;
+      stroke-width: 5px;
+      stroke-dashoffset: 0%;
+      animation: stroke-offset 5.5s infinite linear;
+  }
+  
+  .text-copy:nth-child(1){
+	stroke: #092755;
+	animation-delay: -0.75;
+}
+
+.text-copy:nth-child(2){
+	stroke: #0a326e;
+	animation-delay: -1.5s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #0147af;
+	animation-delay: -2.5s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #0b4fb6;
+	animation-delay: -3.5s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #4d79bd;
+	animation-delay: -4.5s;
+}
+  
+  @keyframes stroke-offset{
+      100% {stroke-dashoffset: -35%;}
+  }

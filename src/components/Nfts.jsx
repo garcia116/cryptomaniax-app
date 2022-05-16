@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Row, Col, Input } from 'antd'
+import { Card, Row, Col, Input, Layout, Table } from 'antd'
 
 import { useGetNftsQuery } from '../services/nftsApi'
 import Loader from './Loader'
+import Column from 'antd/lib/table/Column'
+
+
 
 const Nfts = () => {
 
@@ -17,6 +20,48 @@ const Nfts = () => {
         
         setNfts(filteredData);
     }, [data, searchTerm]);
+
+    const columns =[
+        {
+            title:'Rank',
+            dataIndex:'rank',
+            key:'rank',
+            width: '.5%',
+            render: (item, index) => (data.indexOf(index) + 1)
+    
+        } ,
+        {
+            title:'Name',
+            dataIndex:'collection_name',
+            key:'collection_name'
+    
+        } ,
+        {
+            title:'Volume',
+            dataIndex:'volume',
+            key:'volume'
+    
+        },
+        {
+            title:'Trades',
+            dataIndex:'trades',
+            key:'trades'
+    
+        },
+        {
+            title:'Floor',
+            dataIndex:'floor',
+            key:'floor'
+    
+        },
+        {
+            title:'Website',
+            dataIndex:'collection_url',
+            key:'collection_url',
+            render: (text, record) => <a href={record.collection_url}>{text}</a>
+    
+        }
+    ]
     
     if (!data) return <Loader />;
 
@@ -28,27 +73,13 @@ const Nfts = () => {
                     onChange={(e) => setSearchTerm(e.target.value.toLowerCase())}
                 />
             </div>
-            <Row gutter={[32, 32]} className="crypto-card-container">
-                {nfts?.map((nft, i) => (
-                    <Col
-                        xs={24}
-                        sm={12}
-                        lg={6}
-                        className="crypto-card"
-                        key={i}
-                    >
-                        <Card
-                            hoverable
-                            title={`${i+1}. ${nft.collection_name}`}     
-                        >
-                            <p>Volume: {nft.volume}</p>
-                            <p>Trades: {nft.trades}</p>
-                            <p>Floor: {nft.floor}</p>
-                            <p>Website: <a href={nft.collection_url} target="_blank" rel="noreferrer"> URL</a></p>         
-                        </Card>
-                    </Col>
-                ))}
-            </Row>
+            <Table
+                columns={columns}
+                dataSource={nfts}
+                scroll={{x: 100}}
+            >
+        
+            </Table>
         </>
     )
 }

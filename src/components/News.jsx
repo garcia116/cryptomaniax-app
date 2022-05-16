@@ -31,7 +31,7 @@ const News = ({ simplified }) => {
             filterOption={(input, option) => option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
           >
             <Option value="Cryptocurency">Cryptocurrency</Option>
-            {data?.data?.coins?.map((currency) => <Option value={currency.name}>{currency.name}</Option>)}
+            {data?.data?.coins?.map((currency) => <Option value={currency?.name}>{currency?.name}</Option>)}
           </Select>
         </Col>
       )}
@@ -43,13 +43,13 @@ const News = ({ simplified }) => {
                 <Title className="news-title" level={4}>{news.name}</Title>
                 <img src={news?.image?.thumbnail?.contentUrl || demoImage} alt="" />
               </div>
-              <p>{news.description.length > 100 ? `${news.description.substring(0, 100)}...` : news.description}</p>
+              <p>{news?.description.length > 100 ? `${news.description.substring(0, 100)}...` : news?.description}</p>
               <div className="provider-container">
                 <div>
                   <Avatar src={news.provider[0]?.image?.thumbnail?.contentUrl || demoImage} alt="" />
                   <Text className="provider-name">{news.provider[0]?.name}</Text>
                 </div>
-                <Text>{moment(news.datePublished).startOf('ss').fromNow()}</Text>
+                <Text>{moment(news?.datePublished).startOf('ss').fromNow()}</Text>
               </div>
             </a>
           </Card>

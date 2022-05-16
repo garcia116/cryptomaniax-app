@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
+const { Header, Footer, Sider, Content } = Layout;
 
 import { Navbar, Homepage, Cryptocurrencies, News, CryptoDetails, NFTs }  from './components'
 import './App.css'

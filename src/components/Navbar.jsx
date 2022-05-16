@@ -31,11 +31,25 @@ const Navbar = () => {
     <div className="nav-container">
       <div className="logo-container">
         <Avatar src={icon} size="large" />
-        <Typography.Title level={2} className="logo"><Link to="/">CryptoManiax</Link></Typography.Title>
+        <div className="maniax-container">
+                <svg viewBox="0 10 410 100" className="maniax-svg">
+            <symbol id="s-text">
+              <text text-anchor="middle" x="50%" y="80%">CryptoManiax</text>
+            </symbol>
+
+            <g class = "g-ants">
+              <use xlinkHref="#s-text" class="text-copy"></use>
+              <use xlinkHref="#s-text" class="text-copy"></use>
+              <use xlinkHref="#s-text" class="text-copy"></use>
+              <use xlinkHref="#s-text" class="text-copy"></use>
+              <use xlinkHref="#s-text" class="text-copy"></use>
+            </g>
+          </svg>
+        </div>
         <Button className="menu-control-container" onClick={() => setActiveMenu(!activeMenu)}><MenuOutlined /></Button>
       </div>
       {activeMenu && (
-      <Menu theme="dark">
+      <Menu>
         <Menu.Item icon={<HomeOutlined />}>
           <Link to="/">Home</Link>
         </Menu.Item>
