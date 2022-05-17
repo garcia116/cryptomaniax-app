@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/cryptomaniax-app/static/css/main.db999ab1.css",
-    "main.js": "/cryptomaniax-app/static/js/main.5de62e46.js",
+    "main.js": "/cryptomaniax-app/static/js/main.d3f5f1e0.js",
     "static/media/cryptocurrency.png": "/cryptomaniax-app/static/media/cryptocurrency.cd7f0d7b752965725557.png",
     "index.html": "/cryptomaniax-app/index.html",
     "main.db999ab1.css.map": "/cryptomaniax-app/static/css/main.db999ab1.css.map",
-    "main.5de62e46.js.map": "/cryptomaniax-app/static/js/main.5de62e46.js.map"
+    "main.d3f5f1e0.js.map": "/cryptomaniax-app/static/js/main.d3f5f1e0.js.map"
   },
   "entrypoints": [
     "static/css/main.db999ab1.css",
-    "static/js/main.5de62e46.js"
+    "static/js/main.d3f5f1e0.js"
   ]
 }
