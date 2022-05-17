@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import millify from 'millify';
 import { Link } from 'react-router-dom';
 import { Card, Row, Col, Input, Typography } from 'antd';
-const { Title } = Typography;
-
 import { useGetCryptosQuery } from '../services/cryptoApi';
 import Loader from './Loader';
+const { Title } = Typography;
+
+
 
 const Cryptocurrencies = ({ simplified }) => {
   const count = simplified ? 10 : 100;

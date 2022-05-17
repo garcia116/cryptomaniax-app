@@ -52,7 +52,7 @@ const Navbar = () => {
       {activeMenu && (
       <Menu>
         <Menu.Item icon={<HomeOutlined />}>
-          <Link to="/">Home</Link>
+          <Link to="/cryptomaniax-app">Home</Link>
         </Menu.Item>
         <Menu.Item icon={<DollarOutlined />}>
           <Link to="/cryptocurrencies">Cryptocurrencies</Link>
