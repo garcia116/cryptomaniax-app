@@ -69,7 +69,7 @@ const Nfts = ({ simplified }) => {
         <>
             {!simplified && (
                 <div className="search-crypto">
-                    <Title level={2} className="heading">Top 100 Coins</Title>
+                    <Title level={2} className="heading">Top 100 NFTs in the last 30 days</Title>
                     <Input
                         placeholder="Search Top 100 NFTs this month" 
                         onChange={(e) => setSearchTerm(e.target.value.toLowerCase())}
