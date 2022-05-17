@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 // Note: Change v1 to v2 on rapid api
 
 const cryptoApiHeaders = {
-  'Access-Control-Allow-Origin': "https://garcia116.github.io/cryptomaniax-app/",
+  'Access-Control-Allow-Origin': "*",
   'x-rapidapi-host': process.env.REACT_APP_CRYPTO_RAPIDAPI_HOST,
   'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
 };
