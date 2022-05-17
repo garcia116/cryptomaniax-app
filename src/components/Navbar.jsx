@@ -34,10 +34,10 @@ const Navbar = () => {
         <div className="maniax-container">
                 <svg viewBox="0 10 410 100" className="maniax-svg">
             <symbol id="s-text">
-              <text text-anchor="middle" x="50%" y="80%">CryptoManiax</text>
+              <text textAnchor="middle" x="50%" y="80%">CryptoManiax</text>
             </symbol>
 
-            <g class = "g-ants">
+            <g className = "g-ants">
               <use xlinkHref="#s-text" class="text-copy"></use>
               <use xlinkHref="#s-text" class="text-copy"></use>
               <use xlinkHref="#s-text" class="text-copy"></use>
