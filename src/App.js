@@ -1,7 +1,6 @@
 import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
-import icon from './images/blockchain.png';
 import { Navbar, Homepage, Cryptocurrencies, News, CryptoDetails, NFTs }  from './components'
 import './App.css'
 
