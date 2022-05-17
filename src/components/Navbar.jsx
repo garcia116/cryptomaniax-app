@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Menu, Typography, Avatar } from 'antd';
+import { Button, Menu, Dropdown, Space, Avatar } from 'antd';
 import { Link } from 'react-router-dom';
-import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons';
+import { HomeOutlined, DollarOutlined, ReadOutlined, ProfileOutlined, MenuOutlined } from '@ant-design/icons';
 
 import icon from '../images/cryptocurrency.png';
 
@@ -46,20 +46,21 @@ const Navbar = () => {
             </g>
           </svg>
         </div>
-        <Button className="menu-control-container" onClick={() => setActiveMenu(!activeMenu)}><MenuOutlined /></Button>
+        
+      <Button className="menu-control-container" onClick={() => setActiveMenu(!activeMenu)}  ><MenuOutlined /></Button>
       </div>
       {activeMenu && (
       <Menu>
         <Menu.Item icon={<HomeOutlined />}>
           <Link to="/">Home</Link>
         </Menu.Item>
-        <Menu.Item icon={<FundOutlined />}>
+        <Menu.Item icon={<DollarOutlined />}>
           <Link to="/cryptocurrencies">Cryptocurrencies</Link>
         </Menu.Item>
-        <Menu.Item icon={<BulbOutlined />}>
+        <Menu.Item icon={<ProfileOutlined />}>
           <Link to="/nfts">NFTs</Link>
         </Menu.Item>
-        <Menu.Item icon={<BulbOutlined />}>
+        <Menu.Item icon={<ReadOutlined />}>
           <Link to="/news">News</Link>
         </Menu.Item>
       </Menu>

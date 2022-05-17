@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Row, Col, Input, Layout, Table } from 'antd'
+import { Input, Table } from 'antd'
 
 import { useGetNftsQuery } from '../services/nftsApi'
 import Loader from './Loader'
-import Column from 'antd/lib/table/Column'
 
 
 
-const Nfts = () => {
+const Nfts = ({ simplified }) => {
 
     const { data } = useGetNftsQuery();
     const [nfts, setNfts] = useState();
@@ -67,12 +66,15 @@ const Nfts = () => {
 
     return (
         <>
-            <div className="search-crypto">
+            {!simplified && (
+                <div className="search-crypto">
                 <Input
                     placeholder="Search NFT in Top Collections this month" 
                     onChange={(e) => setSearchTerm(e.target.value.toLowerCase())}
                 />
             </div>
+            )}
+            
             <Table
                 columns={columns}
                 dataSource={nfts}
